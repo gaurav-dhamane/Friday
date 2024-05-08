@@ -72,7 +72,7 @@ const handleSubmit= async (e) => {
 
     // fetch data from server
 
-    const response = await fetch('https://friday-gx9k.onrender.com',{
+    const response = await fetch('https://friday-am6k.onrender.com',{
         method: 'POST',
         headers: {
             'Content-Type':'application/json'
