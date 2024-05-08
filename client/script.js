@@ -72,26 +72,17 @@ const handleSubmit= async (e) => {
 
     // fetch data from server
 
-	// const fetch = require('node-fetch');
-
-const url = 'https://chatgpt-api8.p.rapidapi.com/';
+const url = 'https://chatgpt-gpt4-ai-chatbot.p.rapidapi.com/ask';
 const options = {
   method: 'POST',
   headers: {
     'content-type': 'application/json',
     'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
-    'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
+    'X-RapidAPI-Host': 'chatgpt-gpt4-ai-chatbot.p.rapidapi.com'
   },
-  body: [
-    {
-      content: 'Hello! I\'m an AI assistant bot based on ChatGPT 3. How may I help you?',
-      role: 'system'
-    },
-    {
-      content: 'who won the super bowl 2019?',
-      role: 'user'
-    }
-  ]
+  body: {
+    query: 'How to become rich?'
+  }
 };
 
 try {
