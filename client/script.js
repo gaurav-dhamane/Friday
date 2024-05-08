@@ -82,16 +82,9 @@ const options = {
     'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
     'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
   },
-  body: [
-    {
-      content: 'Hello! I\'m an AI assistant bot based on ChatGPT 3. How may I help you?',
-      role: 'system'
-    },
-    {
-      content: 'who won the super bowl 2019?',
-      role: 'user'
-    }
-  ]
+  body: JSON.stringify({
+            prompt: data.get('prompt')
+        })
 };
 
 try {
@@ -109,10 +102,12 @@ try {
     //     headers: {
     //         'Content-Type':'application/json'
     //     },
-    //     body: JSON.stringify({
-    //         prompt: data.get('prompt')
-    //     })
+        // body: JSON.stringify({
+        //     prompt: data.get('prompt')
+        // })
     // })
+
+	
     clearInterval(loadInterval);
     messageDiv.innerHTML= " ";
     if(response.ok){
