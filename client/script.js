@@ -73,7 +73,7 @@ const handleSubmit= async (e) => {
     // fetch data from server
 
 
-    const fetch = require('node-fetch');
+    // const fetch = require('node-fetch');
 
 const url = 'https://chat-gpt26.p.rapidapi.com/';
 const options = {
