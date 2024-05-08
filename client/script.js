@@ -104,9 +104,11 @@ const handleSubmit= async (e) => {
     		'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
     		'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
         },
-        body: JSON.stringify({
-            prompt: data.get('prompt')
-        })
+        // body: JSON.stringify({
+        //     prompt: data.get('prompt')
+        // })
+
+	body: "hello"
     })
 
     // end
