@@ -72,7 +72,7 @@ const handleSubmit= async (e) => {
 
     // fetch data from server
 
-	const request = require('request');
+	// const request = require('request');
 
 const options = {
   method: 'POST',
