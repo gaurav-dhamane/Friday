@@ -72,32 +72,33 @@ const handleSubmit= async (e) => {
 
     // fetch data from server
 
-
-    // const fetch = require('node-fetch');
-
-const url = 'https://chat-gpt26.p.rapidapi.com/';
+	const url = 'https://chat-gpt26.p.rapidapi.com/';
 const options = {
-  method: 'POST',
-  headers: {
-    'content-type': 'application/json',
-    'Content-Type': 'application/json',
-    'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
-    'X-RapidAPI-Host': 'chat-gpt26.p.rapidapi.com'
-  },
-  body: {
-    model: 'gpt-3.5-turbo',
-    messages: [
-      {
-        role: 'user',
-        content: 'Hello'
-      }
-    ]
-  }
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'Content-Type': 'application/json',
+		'X-RapidAPI-Key': '358e789306mshc6796ab41ead7a8p1a4886jsn77331ff9635b',
+		'X-RapidAPI-Host': 'chat-gpt26.p.rapidapi.com'
+	},
+	body: {
+		model: 'gpt-3.5-turbo',
+		messages: [
+			{
+				role: 'user',
+				content: 'Hello'
+			}
+		]
+	}
 };
 
+try {
 	const response = await fetch(url, options);
 	const result = await response.text();
 	console.log(result);
+} catch (error) {
+	console.error(error);
+}
     //
 
     // const response = await fetch('https://friday-am6k.onrender.com',{
