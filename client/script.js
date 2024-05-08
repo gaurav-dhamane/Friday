@@ -74,26 +74,41 @@ const handleSubmit= async (e) => {
 
 // const fetch = require('node-fetch');
 
-const url = 'https://chatgpt-api8.p.rapidapi.com/';
-const options = {
-  method: 'POST',
-  headers: {
-    'content-type': 'application/json',
+// const url = 'https://chatgpt-api8.p.rapidapi.com/';
+// const options = {
+//   method: 'POST',
+//   headers: {
+//     'content-type': 'application/json',
+//     'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
+//     'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
+//   },
+//   body: JSON.stringify({
+//             prompt: data.get('prompt')
+//         })
+// };
+
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.text();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
+
+
+	//jj
+	const response = await fetch('https://chatgpt-api8.p.rapidapi.com',{
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json',
+	'content-type': 'application/json',
     'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
     'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
-  },
-  body: JSON.stringify({
+        },
+        body: JSON.stringify({
             prompt: data.get('prompt')
         })
-};
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
+    })
 
     // end
 
@@ -102,9 +117,9 @@ try {
     //     headers: {
     //         'Content-Type':'application/json'
     //     },
-        // body: JSON.stringify({
-        //     prompt: data.get('prompt')
-        // })
+    //     body: JSON.stringify({
+    //         prompt: data.get('prompt')
+    //     })
     // })
 
 	
