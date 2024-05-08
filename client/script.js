@@ -72,11 +72,11 @@ const handleSubmit= async (e) => {
 
     // fetch data from server
 
-	// const request = require('request');
+// const fetch = require('node-fetch');
 
+const url = 'https://chatgpt-api8.p.rapidapi.com/';
 const options = {
   method: 'POST',
-  url: 'https://chatgpt-api8.p.rapidapi.com/',
   headers: {
     'content-type': 'application/json',
     'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
@@ -91,15 +91,16 @@ const options = {
       content: 'who won the super bowl 2019?',
       role: 'user'
     }
-  ],
-  json: true
+  ]
 };
 
-request(options, function (error, response, body) {
-	if (error) throw new Error(error);
-
-	console.log(body);
-});
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
 
     // end
 
