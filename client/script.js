@@ -108,7 +108,19 @@ const handleSubmit= async (e) => {
         //     prompt: data.get('prompt')
         // })
 
-	body: "hello"
+	body: [
+    {
+      content: 'Hello! I\'m an AI assistant bot based on ChatGPT 3. How may I help you?',
+      role: 'system'
+    },
+    {
+      content: JSON.stringify({
+            prompt: data.get('prompt')
+        }),
+      role: 'user'
+    }
+  ]
+
     })
 
     // end
