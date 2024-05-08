@@ -100,10 +100,9 @@ const handleSubmit= async (e) => {
 	const response = await fetch('https://chatgpt-api8.p.rapidapi.com',{
         method: 'POST',
         headers: {
-            'Content-Type':'application/json',
-	'content-type': 'application/json',
-    'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
-    'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
+		'content-type': 'application/json',
+    		'X-RapidAPI-Key': 'b1af9eb107msh66828772b903b03p18112cjsn28cd1c095891',
+    		'X-RapidAPI-Host': 'chatgpt-api8.p.rapidapi.com'
         },
         body: JSON.stringify({
             prompt: data.get('prompt')
